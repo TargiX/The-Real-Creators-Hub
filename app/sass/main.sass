@@ -164,6 +164,9 @@
 		margin-top: 0
 		margin-bottom: 40px
 
+.ready-right 
+	padding-left: 40px		
+
 .formsection
 	padding: 30px 0
 	background-color: $dark
@@ -171,7 +174,11 @@
 		background-color: lighten($dark, 6%)
 	form
 		grid-gap: $gutter
-		grid-template-columns: repeat(4, 1fr)	
+		grid-template-columns: repeat(4, 1fr)
+	.button
+		font-size: 17px
+		padding: 14.5px
+		width: 100%
 
 input, textarea
 	border: none
@@ -186,9 +193,74 @@ input, textarea
 	&::placeholder
 		color: lighten($dark, 20%)	
 
+.blog-home
+	grid-gap: $gutter
+	grid-template-columns:  repeat(4, 1fr)
+	
 
+.section-blog
+	h2
+		margin:
+			top: 0
+			bottom: 50px
+	.buttoncase
+		padding-bottom: 0	
 
-.ready-right 
-	padding-left: 40px
+.blog-item
+	background-color: #f7f7f7
+	text-decoration: none
+	grid-template-rows: 1fr 1fr
+	transition: background-color .25s ease
+	overflow: hidden
+	color: #333
+	&:nth-child(3)
+		grid-column: 3 / 5
+	&:nth-child(4)	
+		grid-column: 1 / 3
+	&:hover
+		background-color: $light
+		h4
+			color: $dark
+		.blog-item-img
+			transform: scale(1.05) translateY(-6.5px)
+	&-img
+		height: 270px
+		background-size: cover
+		background-position: center
+		transition: transform .25s ease
+	&-content
+		padding: 25px
+		text-align: center
+		align-content: center	
+		h4
+			font-size: 18px
+			color: #666666
+			line-height: 1.3
+			margin: 0
+			transition: color .25s ease
+		p
+			margin:
+				top: 20px
+				bottom: 0
+
+.main-footer
+	padding: 60px 0
+	background-color: darken($dark, 8%)
+	text-align: center
+	color: #4E5355
+
+.footer-logo
+	font-family: intro-grid, sans-serif
+	font-size: 22px
+	line-height: 1.16
+	span
+		display: block
+		color: #707476
+		font-size: 26.8px
+
+.footer-copy
+	font-size: 20px
+	font-weight: bold
+	margin-top: 20px		
 
 @import "media" // Всегда в конце
